@@ -170,6 +170,12 @@ h3{
   margin-top: 10px;
   display: inline-block;
   transition: all .3s ease;
+  border: 2px solid #fe4918;
+}
+a.buttom.hollow,
+a.buttom.hollow:hover {
+  background-color: #ffffff;
+color:#fc4918;
 }
 
 ul {
