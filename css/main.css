@@ -177,7 +177,13 @@ a.buttom.hollow:hover {
   background-color: #ffffff;
 color:#fc4918;
 }
-
+.buttom.transparente{
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+.buttom.transparente:hover{
+  border: 2px solid #fe4918;
+}
 ul {
  list-style: none;
  margin: 0;
@@ -649,6 +655,31 @@ footer.info-testimonial cite span{
   display: block;
   text-transform: none;
   margin-top: 5px;
+}
+/*** newsletter ****/
+div.newsletter{
+  position: relative;
+  height: auto;
+}
+div.newsletter::before{
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+div.newsletter .contenido {
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+div.newsletter .contenido p{
+  font-size: 3en;
+  text-transform: lowercase;
+}
+div.newsletter .contenido h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
 }
 /* ==========================================================================
    Helper classes
