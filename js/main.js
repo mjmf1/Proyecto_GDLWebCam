@@ -41,6 +41,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
    pase_completo.addEventListener('blur', mostarDias);
 
+   nombre.addEventListener('blur', function(){
+    if (this.value == ''){
+      errorDiv.style.display = 'block';
+      errorDiv.innerHTML = 'Este campo es obligatorio';
+      this.style.border = '1px solid red';
+      errorDiv.style.border = '1px solid red';
+    };
+   });
+
    function calcularMontos(e){
       e.preventDefault();
    if(regalo.value===""){
@@ -94,20 +103,26 @@ function mostarDias(){
       boletoCompleto= parseInt(pase_completo.value, 10 )|| 0,
       diasElegidos = [];
           
-          if(boletoCompleto > 0){
+          if(boletoCompleto){
             diasElegidos.push('viernes', 'sabado', 'domingo');
           }
           else {
           
-          if(boleto2Dias > 0){
+          if(boleto2Dias){
             diasElegidos.push('viernes', 'sabado ');
           }
-          else  if(boletosDia > 0){
+          else  if(boletosDia){
             diasElegidos.push('viernes');
           }
 
           }
           
+          var pedro= '';
+          pedro = boletoCompleto ?  'es marico': '';
+          if(boletoCompleto) {
+            pedro= 'es marico';
+          }
+
   diasElegidos.forEach(diaElegido => {
     document.getElementById(diaElegido).style.display = 'block';
   })
