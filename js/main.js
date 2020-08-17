@@ -15,8 +15,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([4.592852, -74.139819]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();
+    .bindPopup('GDLWebCamp 2020<br> Boletos ya disponibles.')
+    .openPopup()
+    .bindTooltip('un Tooltip')
+    .opentooltip();
 
     //console.log("listo"); 
 
