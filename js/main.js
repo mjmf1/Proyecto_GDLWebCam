@@ -165,3 +165,85 @@ function mostarDias(){
 
  }); //DOM content loaded
 })();
+
+$(function(){
+
+  //lettering
+  $('.nombre-stio').lettering();
+
+  //menu fijo // 
+
+  var windowheight= $(window).height();
+  var barraAltura =$('.barra').innerHeight();
+ 
+ 
+  //console.log(barraAltura);
+ // console.log(windowheight);  //verificacion 
+
+  $(window).scroll(function(){
+   
+    var scroll =$(window).scrollTop();
+
+   if(scroll > windowheight){ 
+
+    $('.barra').addClass('fixed');
+    
+    $('body').css({'margin-top': barraAltura+'px'});
+
+   }else {
+    $('.barra').removeClass('fixed');
+
+    $('body').css({'margin-top': '0px'});
+   }
+  });
+
+
+  // programa de conferencias 
+
+  //$('div.ocultar').hide(); // ocultar eventos 
+
+  $('.programa-evento .info-curso:first').show();
+
+  $('.menu-programa a:first').addClass('activo');
+ 
+  $('.menu-programa a').on('click', function(){
+    
+    $('.menu-programa a').removeClass('activo');
+    $(this).addClass('activo');
+    $('.ocultar').hide();
+   
+    var enlace = $(this).attr('href');
+
+    $(enlace).fadeIn(1000);
+
+    return false;
+    
+  });
+
+  // Animaciones para los Numeros 
+$('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1200);
+$('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 1200);
+$('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1500);
+$('.resumen-evento li:nth-child(4) p').animateNumber({number: 9}, 1500);
+
+// cuenta regresiva
+$('.cuenta-regresiva').countdown('2021/10/04 09:00:00', function(e){
+$('#dias').html(e.strftime('%D'))
+$('#horas').html(e.strftime('%H'))
+$('#minutos').html(e.strftime('%M'))
+$('#segundos').html(e.strftime('%S'))
+
+});
+
+});
+
+
+
+
+
+
+
+
+
+
+

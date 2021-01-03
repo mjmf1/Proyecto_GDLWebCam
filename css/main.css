@@ -196,6 +196,43 @@ ul {
 .float-right{
   float: right;
 }
+/*lettering*/
+h1.nombre-stio span {
+  position: relative;
+  text-shadow: 0 0 30px black;
+}
+@media only screen and (min-width: 992px){
+  .char1{
+top: 20px; right: 20px;
+  }
+  .char2{
+    top: 0; left: -20px;
+  }
+  .char3{
+    top: 10px; right: 20px;
+  }
+  .char4{
+     top: 5px; right: 10px;
+  }
+  .char5{
+    top: 15px; right: 10px;
+  }
+  .char6{
+    top: 5px; left: 10px;
+  }
+  .char7{
+    top: 20px; left: -10px;
+  }
+  .char8{
+    top: 0; left: 10px;
+  }
+  .char9{
+    top: 10px; right: 20px;
+  }
+  .char10{
+    top: 20px; right: 20px;
+  }
+}
              /*header*/
 div.hero{
   background-image: url(../img/encabezado.jpg);
@@ -277,6 +314,13 @@ h1.nombre-stio {
 div.barra{
   background-color: #353535;
   padding: 20px 0;
+}
+.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 div.logo{
   width: 80%;
@@ -391,6 +435,7 @@ div.programa-evento{
     width: 70%;
   }
 }
+
 @media only screen and (min-width:992px){
   div.programa-evento{
     width: 50%;
@@ -398,8 +443,7 @@ div.programa-evento{
 }
 nav.menu-programa{
   width: 100%;
-  border-bottom: 1px solid #fe4918;
-  padding-bottom: 10px;
+  
 }
 @media only screen and (min-width:768px){
   nav.menu-programa{
@@ -414,6 +458,24 @@ nav.menu-programa a{
   font-family: 'Oswald', sans-serif;
   margin-bottom: 10px;
   font-size: 1.2en;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fe4918;
+  
+}
+nav.menu-programa a.activo::after{
+position: absolute;
+content: '';
+left: 0;
+right: 0;
+margin-left: auto;
+margin-right:auto ;
+height: 20px;
+width: 30px;
+background-image: url('../img/talleres-flecha.jpg');
+bottom: -20px;
+background-position: top center;
+background-repeat: no-repeat;
 }
 @media only screen and (min-width:768px){
   nav.menu-programa a{
@@ -425,6 +487,9 @@ div.detalle-evento p i{
   color: #fe4918;
   font-size: 1.6en;
   margin-right: 10px;
+}
+div.ocultar{
+  display: none;
 }
 /*   detalle evento*/
 div.detalle-evento{
@@ -736,6 +801,15 @@ p.copyright{
   font-size: 2en;
 }
 /***** INTERNAS ****/
+
+/*** conferencias ***/
+body.conferencia .navegacion-principal .activo{
+  border-bottom: 2px solid #fe4918;
+}
+div.galeria a{
+  display: inline-block;
+  margin-bottom: 5px;
+}
 /**** REGISTRO *****/
 form.registro h3 {
   text-align: center;

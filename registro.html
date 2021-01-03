@@ -91,7 +91,7 @@
         <!--menu-movil-->
 
         <nav class="navegacion-principal clearfix">
-          <a href="#">conferencia</a>
+          <a href="conferencia.html">conferencia</a>
           <a href="#">Calendario</a>
           <a href="#">Invitado</a>
           <a href="registro.html">Reservaciones</a>
@@ -135,7 +135,7 @@
                 ><i class="fas fa-university"></i>Seminarios</a
               >
             </nav>
-            <div id="talleres " class="info-curso ocultar clearfix">
+            <div id="talleres" class="info-curso ocultar clearfix">
               <div class="detalle-evento">
                 <h3>HTML5,CSS3,javascript</h3>
                 <p><i class="far fa-clock" aria-hidden="true"></i> 16:02 hrs</p>
@@ -143,8 +143,8 @@
                   <i class="far fa-calendar-alt" aria-hidden="true"></i> 26 Dic
                 </p>
                 <p>
-                  <i class="fas fa-user" aria-hidden="true"></i> Marlon Junior
-                  Mora Fernandez
+                  <i class="fas fa-user" aria-hidden="true"></i> Marlon 
+                  Mora 
                 </p>
               </div>
               <!-- detalle evento-->
@@ -156,22 +156,76 @@
                   <i class="far fa-calendar-alt" aria-hidden="true"></i> 26 Dic
                 </p>
                 <p>
-                  <i class="fas fa-user" aria-hidden="true"></i> Marlon Junior
-                  Mora Fernandez
+                  <i class="fas fa-user" aria-hidden="true"></i> Marlon Mora 
+                </p>
+              </div><!-- detalle evento-->
+              
+              <a href="#" class="buttom float-right">Ver todos</a>
+            </div><!-- #talleres-->
+
+
+            <div id="conferencias" class="info-curso ocultar clearfix">
+              <div class="detalle-evento">
+                <h3>Como ser freelancer</h3>
+                <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
+                <p>
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i> 26 Dic
+                </p>
+                <p>
+                  <i class="fas fa-user" aria-hidden="true"></i> Gregorio Sanchez
                 </p>
               </div>
               <!-- detalle evento-->
+
+              <div class="detalle-evento">
+                <h3>Tecnologias del Futuro</h3>
+                <p><i class="far fa-clock" aria-hidden="true"></i> 17:00 hrs</p>
+                <p>
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i> 26 Dic
+                </p>
+                <p>
+                  <i class="fas fa-user" aria-hidden="true"></i> Susan Sanchez
+              </div><!-- detalle evento-->
+              
               <a href="#" class="buttom float-right">Ver todos</a>
-            </div>
-            <!-- info-curso-->
-          </div>
-          <!-- programa-evento-->
-        </div>
-        <!-- contenedor-->
-      </div>
-      <!-- contenido-programa-->
-    </section>
-    <!-- programa-->
+            </div><!-- #talleres-->
+
+            <div id="seminarios" class="info-curso ocultar clearfix">
+              <div class="detalle-evento">
+                <h3>Diseño UI/UX para moviles </h3>
+                <p><i class="far fa-clock" aria-hidden="true"></i> 17:00 hrs</p>
+                <p>
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i> 27 Dic
+                </p>
+                <p>
+                  <i class="fas fa-user" aria-hidden="true"></i> Harold Garcia
+                </p>
+              </div>
+              <!-- detalle evento-->
+
+              <div class="detalle-evento">
+                <h3>Aprende a  programar en una mañana</h3>
+                <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
+                <p>
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i> 27 Dic
+                </p>
+                <p>
+                  <i class="fas fa-user" aria-hidden="true"></i> Susana Rivera
+                </p>
+              </div><!-- detalle evento-->
+              
+              <a href="#" class="buttom float-right">Ver todos</a>
+            </div><!-- #talleres-->
+            
+            
+          </div> <!-- programa-evento-->
+         
+        </div><!-- contenedor-->
+        
+      </div><!-- contenido-programa-->
+      
+    </section><!-- programa-->
+    
 
     <section class="invitados contenedor seccion">
       <h2>Nuestros invitados</h2>
@@ -219,19 +273,19 @@
       <div class="contenedor">
         <ul class="resumen-evento clearfix">
           <li>
-            <p class="numero">6</p>
+            <p class="numero"></p>
             invitados
           </li>
           <li>
-            <p class="numero">15</p>
+            <p class="numero"></p>
             Talleres
           </li>
           <li>
-            <p class="numero">3</p>
+            <p class="numero"></p>
             Dias
           </li>
           <li>
-            <p class="numero">9</p>
+            <p class="numero"></p>
             Conferencias
           </li>
         </ul>
@@ -360,19 +414,19 @@
       <div class="cuenta-regresiva contenedor">
         <ul class="clearfix">
           <li>
-            <p class="numero">80</p>
+            <p id="dias"  class="numero"></p>
             dias
           </li>
           <li>
-            <p class="numero">15</p>
+            <p id="horas" class="numero"></p>
             horas
           </li>
           <li>
-            <p class="numero">5</p>
+            <p id="minutos" class="numero"></p>
             minutos
           </li>
           <li>
-            <p class="numero">30</p>
+            <p id="segundos" class="numero"></p>
             segundos
           </li>
         </ul>
@@ -437,10 +491,15 @@
         );
     </script>
     <script src="js/plugins.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>-->
+    <script src="js/jquery.lettering-0.6.1.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
   crossorigin=""></script>
-    <script src="js/main.js"></script>
+    
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
