@@ -1,105 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="css/normalize.css" />
-    <!--<link rel="stylesheet" href="css/all.css">-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans"
-      rel="stylesheet"
-    />
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin=""/>
-
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-
-  <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-
-    <header class="site-header">
-      <div class="hero">
-        <div class="contendio-header">
-          <nav class="redes-sociales">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-pinterest-square"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </nav>
-
-          <div class="informacion-evento">
-            <div class="clearfix">
-              <p class="fecha"><i class="far fa-calendar-alt"></i>27-18-Dic</p>
-              <p class="ciudad">
-                <i class="fas fa-map-marker-alt"></i>Bogota,CL
-              </p>
-            </div>
-            <!--clearfix-->
-
-            <h1 class="nombre-stio">GDLWebcamp</h1>
-            <p class="slogan">
-              La mejor conferencia de <span>diseño wEb</span>
-            </p>
-          </div>
-          <!--informacion-evento-->
-        </div>
-        <!--contenido-header-->
-      </div>
-      <!--hero-->
-      
-    </header>
-
-    <div class="barra">
-      <div class="contenedor clearfix">
-        <div class="logo">
-          <img src="img/logo.svg" alt="imagen GDLWemcamp" />
-        </div>
-        <!--logo-->
-
-        <div class="menu-movil">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <!--menu-movil-->
-
-        <nav class="navegacion-principal clearfix">
-          <a href="conferencia.html">conferencia</a>
-          <a href="#">Calendario</a>
-          <a href="#">Invitado</a>
-          <a href="registro.html">Reservaciones</a>
-        </nav>
-      </div>
-      <!--contenedor-->
-    </div>
-    <!--barra-->
+ <?php include_once 'includes/header.php' ?> 
 
     <section class="seccion contenedor">
       <h2>La mejor conferencia de diseño web en español</h2>
@@ -337,7 +236,12 @@
         </ul>
       </div>
     </section>
+
+    
+        <!-- MAPA -->
     <div id="mapa" class="mapa"></div>
+
+
 
     <section class="seccion">
       <h2>Testimoniales</h2>
@@ -432,89 +336,7 @@
         </ul>
       </div>
     </section>
-
     
-    <footer class="site-footer">
-      <div class="contenedor clearfix">
-        <div class="footer-informacion">
-          <h3>Sobre <span>GDLWemcamp</span></h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
-            amet, et voluptatum est blanditiis provident aperiam necessitatibus
-            sequi, modi deleniti in, quidem voluptatem ad quia ea possimus
-            reiciendis sapiente commodi.
-          </p>
-        </div>
-
-        <div class="ultimos-tweets">
-          <h3>ultimos <span>tweets</span></h3>
-          <ul>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedi
-            </li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedi
-            </li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedi
-            </li>
-          </ul>
-        </div>
-        <div class="menu">
-          <h3>Redes <span>Sociales</span></h3>
-          <nav class="redes-sociales">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-pinterest-square"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </nav>
-        </div>
-      </div>
-          
-      <p class="copyright">
-        Todos los derechos Reservados GDLWemcamp 2020.
-      </p>
-      
-    </footer>
-
-    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="js/vendor/jquery-3.3.1.min.js"><\/script>'
-        );
-    </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>-->
-    <script src="js/jquery.lettering-0.6.1.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-  crossorigin=""></script>
+    <?php include_once 'includes/footer.php' ?> 
     
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("send", "pageview");
-    </script>
-    <script
-      src="https://www.google-analytics.com/analytics.js"
-      async
-      defer
-    ></script>
-  </body>
-</html>
+    

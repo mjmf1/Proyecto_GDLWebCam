@@ -372,6 +372,7 @@ nav.navegacion-principal a:last-child:hover{
     float: right;
     text-align: right;
     display: block;
+    clear: none;
   }
   nav.navegacion-principal a {
     margin-right: 10px;
@@ -656,6 +657,7 @@ p.numero{
  /*            mapa   */
  div.mapa{
    height: 420px;
+   z-index: 1;
    
  }
  /*            testimoniales   */

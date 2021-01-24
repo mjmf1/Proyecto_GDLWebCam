@@ -45,6 +45,10 @@ L.marker([4.592852, -74.139819]).addTo(map)
     var camisas = document.getElementById('camisa_evento');
    var etiquetas = document.getElementById('etiquetas');
 
+   if(document.getElementById('calcular')){
+
+   
+
    calcular.addEventListener('click', calcularMontos);
 
    pase_dia.addEventListener('blur', mostarDias);
@@ -163,6 +167,8 @@ function mostarDias(){
 
 }
 
+}
+
  }); //DOM content loaded
 })();
 
@@ -187,7 +193,7 @@ $(function(){
    if(scroll > windowheight){ 
 
     $('.barra').addClass('fixed');
-    
+
     $('body').css({'margin-top': barraAltura+'px'});
 
    }else {
@@ -196,6 +202,14 @@ $(function(){
     $('body').css({'margin-top': '0px'});
    }
   });
+
+  // menu responsive
+   
+  $('.menu-movil').on('click', function(){
+    $('.navegacion-principal').slideToggle();
+
+  });
+
 
 
   // programa de conferencias 
