@@ -22,6 +22,7 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/lightbox.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans"
       rel="stylesheet"
@@ -91,10 +92,10 @@
         <!--menu-movil-->
 
         <nav class="navegacion-principal clearfix">
-          <a href="conferencia.html">conferencia</a>
+          <a href="conferencia.php">conferencia</a>
           <a href="#">Calendario</a>
           <a href="#">Invitado</a>
-          <a href="registro.html">Reservaciones</a>
+          <a href="registro.php">Reservaciones</a>
         </nav>
       </div>
       <!--contenedor-->
