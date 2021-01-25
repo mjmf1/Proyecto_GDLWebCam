@@ -80,7 +80,9 @@
     <div class="barra">
       <div class="contenedor clearfix">
         <div class="logo">
+            <a href="index.php">
           <img src="img/logo.svg" alt="imagen GDLWemcamp" />
+          </a>
         </div>
         <!--logo-->
 
