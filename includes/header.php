@@ -103,8 +103,3 @@
       <!--contenedor-->
     </div>
     <!--barra-->  
-
-
-    <p>holaj643</p>
-
-    <h1> pruebaa</h1>
