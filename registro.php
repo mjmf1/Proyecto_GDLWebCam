@@ -1,4 +1,4 @@
-<?php include_once 'includes/header.php' ?> 
+<?php include_once 'includes/templates/header.php' ?> 
 
     <section class="seccion contenedor">
       <h2>Registro de Usuarios</h2>
@@ -466,4 +466,4 @@
         <!-- #resumen -->
       </form>
     </section>
-      <?php include_once 'includes/footer.php' ?> 
+      <?php include_once 'includes/templates/footer.php' ?> 
