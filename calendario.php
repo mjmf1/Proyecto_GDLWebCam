@@ -1,12 +1,34 @@
 <?php include_once 'includes/templates/header.php' ?> 
 
-   
-
-    
-
     <section class="seccion contenedor">
       <h2>Calendario de eventos</h2>
-        
+         
+      <?php  try{
+        require_once('includes/funciones/bd_conexion.php');
+        $sql= 'SELECT * FROM eventos';
+        $res = $conn->query($sql);
+
+      } catch(\Exception $e){
+        echo $e->getMessage();
+      }
+      ?> 
+
+      <div class="calendario">
+      <?php  
+      
+       $eventos = $res->fetch_assoc() 
+
+      ?>
+
+      <pre>
+      <?php var_dump($eventos);?>
+
+      </pre>
+     </div>
+
+     <?php 
+       $conn->close();
+     ?>
       
 
     </section>
