@@ -5,8 +5,17 @@
          
       <?php  try{
         require_once('includes/funciones/bd_conexion.php');
-        $sql= 'SELECT * FROM eventos';
+        $sql = "SELECT evento_id, nombre_evento, fecha_evento, 	hora_evento, cat_evento, /*icono*/ nombre_invitado, apellido_invitado"; /*from eventos inner join categoria_evento on eventos.id_cat_evento = categoria_evento.id_categoria inner join invitados on eventos.id_inv = invitados.invitado_id order by fecha_evento ";*/
+
+        $sql .= " FROM eventos ";
+        $sql .= " INNER JOIN categoria_evento ";
+        $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
+        $sql .= " INNER JOIN invitados ";
+        $sql .= " ON eventos.id_inv = invitados.invitado_id ";
+        $sql .= " ORDER BY evento_id ";
+
         $res = $conn->query($sql);
+
 
       } catch(\Exception $e){
         echo $e->getMessage();
@@ -17,12 +26,10 @@
       <?php  
       
       while($eventos = $res->fetch_assoc()){?>
-
-
-<?php echo $eventos['nombre_evento'];
-      echo '<br>';
-?>
-
+ 
+      <pre>
+      <?php var_dump($eventos);?>
+      </pre>
       <?php  }?>
 
       
