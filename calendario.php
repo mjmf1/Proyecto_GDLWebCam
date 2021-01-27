@@ -16,14 +16,18 @@
       <div class="calendario">
       <?php  
       
-       $eventos = $res->fetch_assoc() 
+      while($eventos = $res->fetch_assoc()){?>
 
-      ?>
 
-      <pre>
-      <?php var_dump($eventos);?>
+<?php echo $eventos['nombre_evento'];
+      echo '<br>';
+?>
 
-      </pre>
+      <?php  }?>
+
+      
+
+      
      </div>
 
      <?php 
