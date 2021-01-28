@@ -23,11 +23,10 @@
       ?> 
 
       <div class="calendario">
-      <?php  
-         
-
+        
+          <div class="calendario">
+      <?php
       $calendario = array();
-      
       while($eventos = $res->fetch_assoc()){
 
          // obtiene la fecha del evento
@@ -52,6 +51,7 @@
  
       
       <?php  } //while de fetch_asso() ?>
+       
 <!-- 
       <pre>
       <?php var_dump($calendario); ?>
@@ -104,7 +104,7 @@
        $conn->close();
      ?>
       
-
+      </div> <!-- calendario -->
     </section>
 
     <?php include_once 'includes/templates/footer.php' ?> 
