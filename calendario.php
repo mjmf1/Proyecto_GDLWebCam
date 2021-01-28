@@ -49,6 +49,25 @@
       
       <?php  } //while de fetch_asso() ?>
 
+      <?php //imprime todos los eventos
+
+      foreach($calendario as $dia => $lista_evento){?>
+
+      <h3>
+      <i class="far fa-calendar-alt"></i>
+      <?php
+          //unix
+          setlocale(LC_TIME, 'es_ES.UTF-8');
+
+          //windows
+          setlocale(LC_TIME, 'spanish');
+               
+
+       echo strftime("%A, %d de %B del %Y", strtotime($dia) ); ?>
+      </h3>
+
+<?php } ?>
+
       <pre>
       <?php var_dump($calendario);?>
       </pre>
