@@ -974,6 +974,13 @@ div.resumen input.buttom{
   display: none;
 }
 /** calendario **/
+div.calendario h3 {
+  background-color: #fe4918;
+  clear: both;
+  color: #e1e1e1;
+  text-align: center;
+  padding: 10px 0;
+}
 div.calendario::after{
   clear: both;
   display: block;
