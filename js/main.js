@@ -249,7 +249,12 @@ $('#segundos').html(e.strftime('%S'))
 
 });
 
+// colorbox
+
+$('.invitado-info').colorbox({inline:true, width:"50%"});
+
 });
+
 
 
 
