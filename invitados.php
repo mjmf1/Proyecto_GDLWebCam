@@ -15,7 +15,7 @@
     <?php while ($invitados = $res->fetch_assoc()) { ?>
       <li>
         <div class="invitado">
-          <a class="invitado-info" href="#invitado<?php echo $invitados['invitado_id']; ?> ">
+          <a class="invitado-info" href="#invitado <?php echo $invitados['invitado_id']; ?> ">
             <img src="img/<?php echo $invitados['url_imagen'] ?>" alt="invitado" />
             <p><?php echo $invitados['nombre_invitado'] . "" . $invitados['apellido_invitado'] ?></p>
           </a>
