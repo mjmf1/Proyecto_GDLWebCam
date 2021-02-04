@@ -1015,6 +1015,11 @@ div.dia i {
   color: #fe4918;
   font-size: 1.5en;
 }
+/*colorbox*/
+div.cboxElement{
+  padding: 30px!important;
+  text-align: center;
+}
 
 /*
  * Hide visually and from screen readers, but maintain layout
