@@ -51,7 +51,7 @@ echo '<link rel="stylesheet" href="css/lightbox.css" />' ;
     
   </head>
 
-  <body>
+  <body class="<?php echo $pagina; ?>">
     <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
