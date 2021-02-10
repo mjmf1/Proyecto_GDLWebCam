@@ -25,14 +25,23 @@
         <div class="contenedor">
           <div class="programa-evento">
             <h2>Programa del evento</h2>
+
+            <?php  try{
+        require_once('includes/funciones/bd_conexion.php');
+        $sql = "SELECT * FROM `categoria_evento` ";
+        $res = $conn->query($sql);
+      } catch(\Exception $e){
+        $error = $e->getMessage();
+      }
+      ?>
             <nav class="menu-programa">
-              <a href="#talleres"><i class="fas fa-code"></i>Talleres</a>
-              <a href="#conferencias"
-                ><i class="fas fa-comment"></i>Conferencias</a
-              >
-              <a href="#seminarios"
-                ><i class="fas fa-university"></i>Seminarios</a
-              >
+            <?php while ($cat = $res->fetch_array(MYSQLI_ASSOC)) {?>
+              <?php $categoria = $cat['cat_evento']; ?>
+              <a href="#<?php echo strtolower($categoria) ?> ">
+                    <i class="fas <?php echo $cat['icono'] ?>"></i><?php echo $categoria ?>
+              </a>
+
+              <?php } ?>
             </nav>
             <div id="talleres" class="info-curso ocultar clearfix">
               <div class="detalle-evento">
