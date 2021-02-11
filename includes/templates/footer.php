@@ -59,7 +59,23 @@
     <script src="js/jquery.countdown.min.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>-->
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
-    <script src="js/lightbox.js"></script>
+    <?php 
+$archivo = basename($_SERVER['PHP_SELF']);
+$pagina = str_replace(".php", "", $archivo);
+
+if($pagina == 'invitados' || $pagina == 'index'){
+
+  echo '<script src="js/jquery.colorbox-min.js"></script>';
+
+} else if($pagina == 'conferencia'){
+
+echo '<script src="js/lightbox.js"></script>' ;
+}
+
+?>
+
+    
+     
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
   crossorigin=""></script>

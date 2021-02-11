@@ -22,7 +22,21 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/lightbox.css" />
+
+<?php 
+$archivo = basename($_SERVER['PHP_SELF']);
+$pagina = str_replace(".php", "", $archivo);
+
+if($pagina == 'invitados' || $pagina == 'index'){
+
+  echo '<link rel="stylesheet" href="css/colorbox.css">';
+
+} else if($pagina == 'conferencia'){
+
+echo '<link rel="stylesheet" href="css/lightbox.css" />' ;
+}
+
+?>
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans"
       rel="stylesheet"
@@ -33,9 +47,11 @@
   crossorigin=""/>
 
     <link rel="stylesheet" href="css/main.css" />
+    
+    
   </head>
 
-  <body>
+  <body class="<?php echo $pagina; ?>">
     <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -96,7 +112,7 @@
         <nav class="navegacion-principal clearfix">
           <a href="conferencia.php">conferencia</a>
           <a href="calendario.php">Calendario</a>
-          <a href="#">Invitado</a>
+          <a href="invitados.php">Invitado</a>
           <a href="registro.php">Reservaciones</a>
         </nav>
       </div>
