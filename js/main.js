@@ -187,9 +187,9 @@ $(function(){
 
   //agregando clase al menu
 
-  $('.body.conferencia .navegacion-principal a:contains("conferencia")').addClass('activo');
-  $('.body.calendario .navegacion-principal a:contains("Calendario")').addClass('activo');
-  $('.body.invitados .navegacion-principal a:contains("Invitados")').addClass('activo');
+  $('body.conferencia .navegacion-principal a:contains("conferencia")').addClass('activo');
+  $('body.calendario .navegacion-principal a:contains("Calendario")').addClass('activo');
+  $('body.invitados .navegacion-principal a:contains("Invitados")').addClass('activo');
   //menu fijo // 
 
   var windowheight= $(window).height();
