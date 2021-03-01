@@ -40,6 +40,10 @@ L.marker([4.592852, -74.139819]).addTo(map)
    var botonRegistro = document.getElementById('btnRegistro');
    var lista_productos = document.getElementById('lista-productos');
    var suma = document.getElementById('suma-total');
+   var viernes = document.getElementById("viernes");
+    var sabado = document.getElementById("sabado");
+    var domingo = document.getElementById("domingo");
+    btnRegistro.disabled = true;
 
    // extras
     var camisas = document.getElementById('camisa_evento');
@@ -51,11 +55,11 @@ L.marker([4.592852, -74.139819]).addTo(map)
 
    calcular.addEventListener('click', calcularMontos);
 
-   pase_dia.addEventListener('blur', mostarDias);
+   pase_dia.addEventListener('blur', mostrarDias);
 
-   pase_dosdias.addEventListener('blur', mostarDias );
+   pase_dosdias.addEventListener('blur', mostrarDias );
 
-   pase_completo.addEventListener('blur', mostarDias);
+   pase_completo.addEventListener('blur', mostrarDias);
 
    nombre.addEventListener('blur', validarCampos);     //validacion
    apellido.addEventListener('blur', validarCampos);
@@ -99,8 +103,9 @@ L.marker([4.592852, -74.139819]).addTo(map)
           cantCamisas = parseInt(camisas.value, 10 )|| 0,
           cantEtiquetas = parseInt(etiquetas.value, 10 )|| 0;
 
-          var totalPagar = (boletosDia * 30) + (boleto2Dias * 45) + (boletoCompleto * 50) + ((cantCamisas * 10) *.93) + (cantEtiquetas * 2); 
-         
+          var totalPagar = (boletosDia * 30) + (boleto2Dias * 45) + (boletoCompleto * 50) + ((cantCamisas * 10)*0.93) + (cantEtiquetas * 2); 
+         console.log(totalPagar);
+
           var listadoProductos = [];
           
           if(boletosDia >= 1){
@@ -125,7 +130,10 @@ L.marker([4.592852, -74.139819]).addTo(map)
             lista_productos.innerHTML += listadoProductos[i] + '<br/>';
           }
 
-          suma.innerHTML = "$ " + totalPagar.toFixed(2);
+          suma.innerHTML = " $ " + totalPagar.toFixed(2);
+
+          btnRegistro.disabled = false;
+          document.getElementById('total_pedido').value= totalPagar;
  
 
          }
