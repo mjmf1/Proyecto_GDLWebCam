@@ -23,15 +23,15 @@
     $pedido = productos_json($boletos,$camisas,$etiquetas);
     echo $pedido;
 
-    echo '<pre>';
+    // eventos
 
-    var_dump($pedido);
-
-    '</pre>';
+    $eventos = $_POST['registro'];
+    $registro = eventos_json($eventos);
     
     ?>
+
 <pre>
-<?php var_dump($boletos); ?>
+<?php var_dump($registro); ?>
 </pre>
 
 <?php endif; ?>
