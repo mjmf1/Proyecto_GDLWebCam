@@ -13,7 +13,7 @@
     $fecha = date('Y-n-d H:i:s');
 
     //pedidos
-    $boletos = $_POST['boletos_'];
+    $boletos = $_POST['boletos'];
     $camisas = $_POST['pedido_camisas'];
     $etiquetas = $_POST['pedido_etiquetas'];
     

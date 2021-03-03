@@ -92,11 +92,11 @@
                   <li>Todos los Talleres</li>
                 </ul>
                 <div class="orden">
-                  <label for="Pase_dos_dias">Boletos deseados:</label>
+                  <label for="Pase_dosdias">Boletos deseados:</label>
                   <input
                     type="number"
                     min="0"
-                    id="pase_dos_dias"
+                    id="pase_dosdias"
                     size="3"
                     name="boletos[]"
                     placeholder="0"
