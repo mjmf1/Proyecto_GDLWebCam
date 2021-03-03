@@ -11,12 +11,27 @@
     $regalo = $_POST['regalo'];
     $total = $_POST['total_pedido'];
     $fecha = date('Y-n-d H:i:s');
+
+    //pedidos
+    $boletos = $_POST['boletos_'];
+    $camisas = $_POST['pedido_camisas'];
+    $etiquetas = $_POST['pedido_etiquetas'];
     
     
+    include_once 'includes/funciones/funciones.php' ;
+
+    $pedido = productos_json($boletos,$camisas,$etiquetas);
+    echo $pedido;
+
+    echo '<pre>';
+
+    var_dump($pedido);
+
+    '</pre>';
     
     ?>
 <pre>
-<?php var_dump($_POST); ?>
+<?php var_dump($boletos); ?>
 </pre>
 
 <?php endif; ?>

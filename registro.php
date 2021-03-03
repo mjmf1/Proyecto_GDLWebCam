@@ -54,7 +54,7 @@
                     min="0"
                     id="pase_dia"
                     size="3"
-                    name="boletos []"
+                    name="boletos[]"
                     placeholder="0"
                   />
                 </div>
@@ -76,7 +76,7 @@
                     min="0"
                     id="pase_completo"
                     size="3"
-                    name="boletos []"
+                    name="boletos[]"
                     placeholder="0"
                   />
                 </div>
@@ -92,13 +92,13 @@
                   <li>Todos los Talleres</li>
                 </ul>
                 <div class="orden">
-                  <label for="Pase_dosdias">Boletos deseados:</label>
+                  <label for="Pase_dos_dias">Boletos deseados:</label>
                   <input
                     type="number"
                     min="0"
-                    id="pase_dosdias"
+                    id="pase_dos_dias"
                     size="3"
-                    name="boletos []"
+                    name="boletos[]"
                     placeholder="0"
                   />
                 </div>
@@ -440,7 +440,7 @@
                   <option value="">-- Seleccione un regalo--</option>
                   <option value="2">Etiquetas</option>
                   <option value="1">Pulsera</option>
-                  <option value="3">Pluma</option>
+                  <option value="3">Plumas</option>
                 </select>
               </div>
               <!-- roden -->
