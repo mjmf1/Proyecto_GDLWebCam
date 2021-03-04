@@ -1,40 +1,48 @@
-<?php include_once 'includes/templates/header.php' ?> 
+<?php include_once 'includes/templates/header.php' ?>
 
 <section class="seccion contenedor">
-      <h2>Resemuen Registro</h2>
+    <h2>Resemuen Registro</h2>
 
- <?php if(isset($_POST['submit'])):
-    
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $email = $_POST['email'];
-    $regalo = $_POST['regalo'];
-    $total = $_POST['total_pedido'];
-    $fecha = date('Y-n-d H:i:s');
+    <?php if (isset($_POST['submit'])) :
 
-    //pedidos
-    $boletos = $_POST['boletos'];
-    $camisas = $_POST['pedido_camisas'];
-    $etiquetas = $_POST['pedido_etiquetas'];
-    
-    
-    include_once 'includes/funciones/funciones.php' ;
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
+        $email = $_POST['email'];
+        $regalo = $_POST['regalo'];
+        $total = $_POST['total_pedido'];
+        $fecha = date('Y-n-d H:i:s');
 
-    $pedido = productos_json($boletos,$camisas,$etiquetas);
-    echo $pedido;
+        //pedidos
+        $boletos = $_POST['boletos'];
+        $camisas = $_POST['pedido_camisas'];
+        $etiquetas = $_POST['pedido_etiquetas'];
 
-    // eventos
 
-    $eventos = $_POST['registro'];
-    $registro = eventos_json($eventos);
-    
+        include_once 'includes/funciones/funciones.php';
+
+        $pedido = productos_json($boletos, $camisas, $etiquetas);
+
+        // eventos
+
+        $eventos = $_POST['registro'];
+        $registro = eventos_json($eventos);
+
+        try {
+            require_once("includes/funciones/bd_conexion.php");
+
+            $stmt = $conn->prepare("INSERT INTO registrados ( nombre_registrado, apellido_registrado, email_registrado, fecha_registro, pases_articulos, talleres_registrados, regalo, total_pagado) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("ssssssis", $nombre, $apellido, $email, $fecha, $pedido, $registro, $regalo, $total);
+            $stmt->execute();
+            $stmt->close();
+            $conn->close();
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
     ?>
 
-<pre>
-<?php var_dump($registro); ?>
-</pre>
 
-<?php endif; ?>
+
+    <?php endif; ?>
 
 </section>
-<?php include_once 'includes/templates/footer.php' ?> 
+<?php include_once 'includes/templates/footer.php' ?>
