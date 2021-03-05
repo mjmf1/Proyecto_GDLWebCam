@@ -54,6 +54,7 @@
                     min="0"
                     id="pase_dia"
                     size="3"
+                    name="boletos[]"
                     placeholder="0"
                   />
                 </div>
@@ -75,6 +76,7 @@
                     min="0"
                     id="pase_completo"
                     size="3"
+                    name="boletos[]"
                     placeholder="0"
                   />
                 </div>
@@ -96,6 +98,7 @@
                     min="0"
                     id="pase_dosdias"
                     size="3"
+                    name="boletos[]"
                     placeholder="0"
                   />
                 </div>
@@ -410,6 +413,7 @@
                   type="number"
                   min="0"
                   id="camisa_evento"
+                  name="pedido_camisas"
                   size="3"
                   placeholder="0"
                 />
@@ -424,6 +428,7 @@
                   type="number"
                   min="0"
                   id="etiquetas"
+                  name="pedido_etiquetas"
                   size="3"
                   placeholder="0"
                 />
@@ -431,11 +436,11 @@
               <!-- roden -->
               <div class="orden">
                 <label for="regalo">Seleccione un regalo</label> <br/>
-                <select id="regalo"  required>
+                <select id="regalo" name="regalo" required>
                   <option value="">-- Seleccione un regalo--</option>
-                  <option value="ETI">Etiquetas</option>
-                  <option value="PUL">Pulsera</option>
-                  <option value="PLU">Pluma</option>
+                  <option value="2">Etiquetas</option>
+                  <option value="1">Pulsera</option>
+                  <option value="3">Plumas</option>
                 </select>
               </div>
               <!-- roden -->
@@ -452,10 +457,12 @@
               <div id="lista-productos"></div>
               <p>Total:</p>
               <div id="suma-total"></div>
+              <input type="hidden" name="total_pedido" id="total_pedido" >
               <input
                 type="submit"
                 id="btnRegistro"
                 class="buttom"
+                name="submit"
                 value="Pagar"
               />
             </div>
