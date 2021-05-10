@@ -257,7 +257,7 @@
    <div class="contenido contenedor">
      <p>Resgistrate al newsletter:</p>
      <h3>GDLWemcamp</h3>
-     <a href="#" class="buttom transparente">Registro</a>
+     <a href="#mc_embed_signup" class=" buttom_newsletter buttom transparente">Registro</a>
    </div>
    <!--contenido contenedor -->
  </div>

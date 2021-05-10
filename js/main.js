@@ -248,6 +248,8 @@ $('.invitado-info').colorbox({inline:true, width:"50%"});
 
 });
 
+$('.buttom_newsletter').colorbox({inline:true, width:"50%"});
+
 
 
 
